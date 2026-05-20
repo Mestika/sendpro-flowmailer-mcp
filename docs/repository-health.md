@@ -48,7 +48,7 @@ Good badges for this project:
 - TypeScript
 - MCP transport
 - read-only default
-- npm version and npm downloads after npm publication
+- npm version and npm downloads
 
 Avoid badges that imply unverifiable claims, such as "Top ranked", "Trending", or "Best" unless a real service computes that status and the badge links to the evidence.
 
@@ -56,15 +56,10 @@ Example badge Markdown:
 
 ```markdown
 [![GitHub Release](https://img.shields.io/github/v/release/Mestika/sendpro-flowmailer-mcp?sort=semver&display_name=tag)](https://github.com/Mestika/sendpro-flowmailer-mcp/releases)
-[![CI](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml)
-[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mestika/sendpro-flowmailer-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/Mestika/sendpro-flowmailer-mcp)
-```
-
-Once the package is published to npm, add:
-
-```markdown
 [![npm version](https://img.shields.io/npm/v/sendpro-flowmailer-mcp.svg)](https://www.npmjs.com/package/sendpro-flowmailer-mcp)
 [![npm downloads](https://img.shields.io/npm/dm/sendpro-flowmailer-mcp.svg)](https://www.npmjs.com/package/sendpro-flowmailer-mcp)
+[![CI](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mestika/sendpro-flowmailer-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/Mestika/sendpro-flowmailer-mcp)
 ```
 
 ## Branches, Tags, and Releases

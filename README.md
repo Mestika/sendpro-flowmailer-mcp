@@ -1,6 +1,8 @@
 # Spotler SendPro / FlowMailer MCP Server
 
 [![GitHub Release](https://img.shields.io/github/v/release/Mestika/sendpro-flowmailer-mcp?sort=semver&display_name=tag)](https://github.com/Mestika/sendpro-flowmailer-mcp/releases)
+[![npm version](https://img.shields.io/npm/v/sendpro-flowmailer-mcp.svg)](https://www.npmjs.com/package/sendpro-flowmailer-mcp)
+[![npm downloads](https://img.shields.io/npm/dm/sendpro-flowmailer-mcp.svg)](https://www.npmjs.com/package/sendpro-flowmailer-mcp)
 [![CI](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mestika/sendpro-flowmailer-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/Mestika/sendpro-flowmailer-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -26,13 +28,13 @@ This project is not affiliated with, endorsed by, or maintained by Spotler. It i
 
 ## Install
 
-After npm publication:
+From npm:
 
 ```bash
 npx -y sendpro-flowmailer-mcp
 ```
 
-From GitHub:
+Directly from GitHub:
 
 ```bash
 npx -y github:Mestika/sendpro-flowmailer-mcp
@@ -121,7 +123,7 @@ SENDPRO_CLIENT_SECRET = "your-client-secret"
 SENDPRO_READ_ONLY = "true"
 ```
 
-To run from GitHub before npm publication:
+To run directly from GitHub:
 
 ```toml
 [mcp_servers.sendpro_flowmailer]
@@ -251,12 +253,12 @@ For repository structure, badges, release hygiene, and maintenance settings, see
 
 ## Publishing
 
-This repository is prepared for npm and MCP Registry publication.
+This package is published to npm as [sendpro-flowmailer-mcp](https://www.npmjs.com/package/sendpro-flowmailer-mcp), and the repository includes MCP Registry metadata for registry submission.
 
 For npm:
 
 ```bash
-npm publish --access public --provenance
+npm publish --access public
 ```
 
 For the official MCP Registry, publish [server.json](server.json) after the npm package exists. The npm package includes:

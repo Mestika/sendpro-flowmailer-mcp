@@ -55,8 +55,10 @@ A GitHub Release is built from a tag and adds human-readable release notes plus 
 7. Publish to npm:
 
    ```bash
-   npm publish --access public --provenance
+   npm publish --access public
    ```
+
+   For future releases, prefer the GitHub Actions release workflow with npm trusted publishing enabled for this repository. Trusted publishing uses OIDC and npm generates provenance automatically for public packages. The workflow skips versions that are already present on npm.
 
 8. Verify install:
 

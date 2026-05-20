@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 This project follows semantic versioning where practical.
 
+## 0.1.1 - 2026-05-20
+
+- Prepared npm-first installation docs and npm badges.
+- Added repository health documentation and OpenSSF Scorecard workflow.
+- Fixed Scorecard publishing permissions.
+- Updated package and MCP Registry metadata for npm publication.
+
 ## 0.1.0 - 2026-05-20
 
 - Initial unofficial MCP server for Spotler SendPro / FlowMailer.

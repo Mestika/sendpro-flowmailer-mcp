@@ -1,14 +1,14 @@
 {
   "name": "sendpro-flowmailer-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Unofficial MCP server for Spotler SendPro, formerly FlowMailer.",
   "type": "module",
   "mcpName": "io.github.mestika/sendpro-flowmailer-mcp",
   "bin": {
-    "sendpro-flowmailer-mcp": "./dist/index.js",
-    "sendpro-mcp": "./dist/index.js",
-    "spotler-sendpro-mcp": "./dist/index.js",
-    "flowmailer-sendpro-mcp": "./dist/index.js"
+    "sendpro-flowmailer-mcp": "dist/index.js",
+    "sendpro-mcp": "dist/index.js",
+    "spotler-sendpro-mcp": "dist/index.js",
+    "flowmailer-sendpro-mcp": "dist/index.js"
   },
   "files": [
     "dist",
@@ -68,7 +68,6 @@
     "url": "https://github.com/Mestika/sendpro-flowmailer-mcp/issues"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   }
 }

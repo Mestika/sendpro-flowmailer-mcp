@@ -2,6 +2,9 @@ name: Release
 
 on:
   workflow_dispatch:
+  push:
+    tags:
+      - "v*"
 
 permissions:
   contents: read
@@ -16,19 +19,33 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 24.x
           registry-url: https://registry.npmjs.org
-          cache: npm
+          package-manager-cache: false
+
+      - name: Check npm publication
+        id: npm
+        run: |
+          PACKAGE_NAME="$(node -p "require('./package.json').name")"
+          PACKAGE_VERSION="$(node -p "require('./package.json').version")"
+          if npm view "$PACKAGE_NAME@$PACKAGE_VERSION" version >/dev/null 2>&1; then
+            echo "published=true" >> "$GITHUB_OUTPUT"
+            echo "$PACKAGE_NAME@$PACKAGE_VERSION is already published."
+          else
+            echo "published=false" >> "$GITHUB_OUTPUT"
+            echo "$PACKAGE_NAME@$PACKAGE_VERSION is not published yet."
+          fi
 
       - name: Install
+        if: steps.npm.outputs.published != 'true'
         run: npm ci
 
       - name: Check
+        if: steps.npm.outputs.published != 'true'
         run: npm run check
 
       - name: Publish
-        run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: steps.npm.outputs.published != 'true'
+        run: npm publish --access public
