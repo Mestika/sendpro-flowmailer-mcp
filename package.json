@@ -1,6 +1,6 @@
 {
   "name": "sendpro-flowmailer-mcp",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Unofficial MCP server for Spotler SendPro, formerly FlowMailer.",
   "type": "module",
   "mcpName": "io.github.mestika/sendpro-flowmailer-mcp",

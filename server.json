@@ -3,7 +3,7 @@
   "name": "io.github.mestika/sendpro-flowmailer-mcp",
   "title": "Spotler SendPro / FlowMailer",
   "description": "Unofficial MCP server for the Spotler SendPro API, formerly FlowMailer.",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "websiteUrl": "https://github.com/Mestika/sendpro-flowmailer-mcp#readme",
   "repository": {
     "url": "https://github.com/Mestika/sendpro-flowmailer-mcp",
@@ -14,7 +14,7 @@
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "sendpro-flowmailer-mcp",
-      "version": "0.1.1",
+      "version": "1.0.0",
       "runtimeHint": "npx",
       "transport": {
         "type": "stdio"

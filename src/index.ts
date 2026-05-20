@@ -11,7 +11,7 @@ async function main(): Promise<void> {
   const server = new McpServer(
     {
       name: "sendpro-flowmailer-mcp",
-      version: "0.1.1"
+      version: "1.0.0"
     },
     {
       instructions:
