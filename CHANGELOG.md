@@ -12,3 +12,4 @@ This project follows semantic versioning where practical.
 - Added generic SendPro request tool and common convenience tools.
 - Added MCP Registry metadata in `server.json`.
 - Added GitHub Actions CI and repository health files.
+- Added credential creation guidance with official SendPro API references.

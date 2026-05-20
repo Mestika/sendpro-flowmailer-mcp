@@ -71,6 +71,36 @@ Legacy aliases are supported:
 
 Precedence is: `READ_ONLY`, then `SENDPRO_*`, then `SPOTLER_SENDPRO_*`, then `FLOWMAILER_*`.
 
+## Creating SendPro API Credentials
+
+SendPro uses OAuth2 client credentials. You need three values:
+
+- account id
+- client id
+- client secret
+
+The public SendPro API docs state that the API uses OAuth2 client credentials, that the access token endpoint is `https://login.flowmailer.net/oauth/token`, and that the `client_id`, `client_secret`, `grant_type=client_credentials`, and optional `scope=api` form values are used to request a token. The same docs also expose source-system credential endpoints under `/{account_id}/sources/{source_id}/users`, including endpoints to list, create, get, update, and delete source credentials.
+
+In the SendPro dashboard, the exact labels can vary by account, but the usual path is:
+
+1. Sign in to Spotler SendPro.
+2. Go to Setup.
+3. Open Sources or Source systems.
+4. Select the source system that should be used for API access, or create a dedicated source for MCP/automation usage.
+5. Open the source credentials/users section.
+6. Create new credentials with a clear description such as `MCP read-only`.
+7. Copy the generated client id and client secret, and store them in your MCP client environment.
+8. Use the SendPro account id from your account URL, dashboard context, or API settings as `SENDPRO_ACCOUNT_ID`.
+
+For AI-agent usage, prefer credentials that are limited to the minimum access needed. Keep this MCP server in read-only mode unless you explicitly need submit, simulate, or resend operations.
+
+Official references:
+
+- [SendPro API authentication](https://flowmailer.com/apidoc/sendpro-api.html#_authentication)
+- [POST `/oauth/token`](https://flowmailer.com/apidoc/sendpro-api.html#_post_oauth_token)
+- [Source credential endpoints](https://flowmailer.com/apidoc/sendpro-api.html#_post_account_id_sources_source_id_users)
+- [Spotler SendPro Help Center](https://sendpro.spotler.help/hc/en-gb)
+
 ## Codex
 
 Add this to `~/.codex/config.toml`:

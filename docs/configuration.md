@@ -23,3 +23,16 @@ The server reads configuration from environment variables. Values passed by an M
 ## Aliases
 
 `SPOTLER_SENDPRO_*` and legacy `FLOWMAILER_*` aliases are supported for credential and read-only variables.
+
+## Creating Credentials
+
+SendPro uses OAuth2 client credentials. Create or locate credentials in the SendPro dashboard under the account setup area for sources/source systems and source credentials/users. Use a dedicated source or credential pair for MCP access where possible.
+
+The official API documentation confirms:
+
+- `POST https://login.flowmailer.net/oauth/token` requests an access token.
+- `client_id` and `client_secret` are required form fields.
+- `grant_type` must be `client_credentials`.
+- Source credential endpoints are exposed under `/{account_id}/sources/{source_id}/users`.
+
+Keep `SENDPRO_READ_ONLY=true` for routine use.
