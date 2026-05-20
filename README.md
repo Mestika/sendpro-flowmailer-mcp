@@ -1,10 +1,13 @@
 # Spotler SendPro / FlowMailer MCP Server
 
-[![npm version](https://img.shields.io/npm/v/sendpro-flowmailer-mcp.svg)](https://www.npmjs.com/package/sendpro-flowmailer-mcp)
+[![GitHub Release](https://img.shields.io/github/v/release/Mestika/sendpro-flowmailer-mcp?sort=semver&display_name=tag)](https://github.com/Mestika/sendpro-flowmailer-mcp/releases)
 [![CI](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/Mestika/sendpro-flowmailer-mcp/actions/workflows/ci.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mestika/sendpro-flowmailer-mcp/badge)](https://scorecard.dev/viewer/?uri=github.com/Mestika/sendpro-flowmailer-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![MCP](https://img.shields.io/badge/MCP-stdio-blue)](https://modelcontextprotocol.io/)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D20-339933)](package.json)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.x-3178c6?logo=typescript&logoColor=white)](tsconfig.json)
+[![MCP](https://img.shields.io/badge/MCP-stdio-blue)](https://modelcontextprotocol.io/)
+[![Read-only default](https://img.shields.io/badge/read--only-default-success)](#read-only-mode)
 
 Unofficial Model Context Protocol server for the Spotler SendPro API, formerly known as FlowMailer.
 
@@ -243,6 +246,8 @@ npm run typecheck
 npm test
 npm run inspect
 ```
+
+For repository structure, badges, release hygiene, and maintenance settings, see [docs/repository-health.md](docs/repository-health.md).
 
 ## Publishing
 
