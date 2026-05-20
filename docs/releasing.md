@@ -21,14 +21,22 @@ A GitHub Release is built from a tag and adds human-readable release notes plus 
 ## Checklist
 
 1. Make sure `main` is clean and up to date.
-2. Update `CHANGELOG.md`.
-3. Run:
+2. Use the repository Node version from `.node-version`:
+
+   ```bash
+   node --version
+   ```
+
+   Release tooling expects Node 24. Older Node 20 builds can fail in Vitest/Rolldown before publishing.
+
+3. Update `CHANGELOG.md`.
+4. Run:
 
    ```bash
    npm run check
    ```
 
-4. Choose the right version bump:
+5. Choose the right version bump:
 
    ```bash
    npm run version:patch
@@ -38,13 +46,13 @@ A GitHub Release is built from a tag and adds human-readable release notes plus 
 
    These wrap `npm version` and create a commit plus matching Git tag.
 
-5. Push the commit and tag:
+6. Push the commit and tag:
 
    ```bash
    git push origin main --follow-tags
    ```
 
-6. Create a GitHub Release from the tag:
+7. Create a GitHub Release from the tag:
 
    ```bash
    gh release create vX.Y.Z --title "vX.Y.Z" --notes-file CHANGELOG.md
@@ -52,7 +60,7 @@ A GitHub Release is built from a tag and adds human-readable release notes plus 
 
    For small releases, writing concise release notes manually is better than pasting the full changelog.
 
-7. Publish to npm:
+8. Publish to npm:
 
    ```bash
    npm publish --access public
@@ -60,7 +68,7 @@ A GitHub Release is built from a tag and adds human-readable release notes plus 
 
    For future releases, prefer the GitHub Actions release workflow with npm trusted publishing enabled for this repository. Trusted publishing uses OIDC and npm generates provenance automatically for public packages. The workflow skips versions that are already present on npm.
 
-8. Verify install:
+9. Verify install:
 
    ```bash
    npx -y sendpro-flowmailer-mcp
