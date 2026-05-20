@@ -262,6 +262,21 @@ For the official MCP Registry, publish [server.json](server.json) after the npm 
 }
 ```
 
+## Releases and Versions
+
+This project uses semantic version tags such as `v0.1.0`, `v0.1.1`, and `v1.0.0`.
+
+Use:
+
+```bash
+npm run version:patch  # bug fixes and small documentation-only release updates
+npm run version:minor  # new backwards-compatible tools or features
+npm run version:major  # breaking changes
+git push origin main --follow-tags
+```
+
+Then create a GitHub Release from the new tag. The GitHub Release is the public changelog entry; the Git tag is the exact source snapshot. See [docs/releasing.md](docs/releasing.md) for the full checklist.
+
 ## Security
 
 Never commit real SendPro credentials. Use MCP client environment variables, shell environment variables, or a local `.env` file.

@@ -25,6 +25,9 @@
     "prepack": "npm run build",
     "prepublishOnly": "npm run check",
     "prepare": "npm run build",
+    "version:major": "npm version major -m \"Release v%s\"",
+    "version:minor": "npm version minor -m \"Release v%s\"",
+    "version:patch": "npm version patch -m \"Release v%s\"",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
