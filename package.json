@@ -1,0 +1,71 @@
+{
+  "name": "sendpro-flowmailer-mcp",
+  "version": "0.1.0",
+  "description": "Unofficial MCP server for Spotler SendPro, formerly FlowMailer.",
+  "type": "module",
+  "mcpName": "io.github.mestika/sendpro-flowmailer-mcp",
+  "bin": {
+    "sendpro-flowmailer-mcp": "./dist/index.js",
+    "sendpro-mcp": "./dist/index.js",
+    "spotler-sendpro-mcp": "./dist/index.js",
+    "flowmailer-sendpro-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "README.md",
+    ".env.example",
+    "server.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "npm run typecheck && npm test && npm run build",
+    "dev": "tsx src/index.ts",
+    "inspect": "npx -y @modelcontextprotocol/inspector node dist/index.js",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run check",
+    "prepare": "npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsx": "^4.20.6",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sendpro",
+    "spotler",
+    "flowmailer",
+    "email",
+    "transactional-email",
+    "sms",
+    "api",
+    "stdio"
+  ],
+  "author": "Mestika",
+  "license": "MIT",
+  "homepage": "https://github.com/Mestika/sendpro-flowmailer-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mestika/sendpro-flowmailer-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mestika/sendpro-flowmailer-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

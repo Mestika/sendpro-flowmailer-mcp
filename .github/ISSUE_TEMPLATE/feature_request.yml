@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest a new endpoint, tool, or packaging improvement.
+title: "Feature: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow should this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the behavior or API endpoint you want supported.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Links to public SendPro documentation are useful. Do not include credentials or customer data.
+    validations:
+      required: false
